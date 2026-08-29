@@ -1,0 +1,32 @@
+{%- comment -%}
+Renders the "Selected Publications" section for one research area.
+
+Parameters:
+  area   "compbio" or "epi" — matched against the `area:` field in _data/publications.yml
+  lang   "en" or "ja"
+{%- endcomment -%}
+{%- assign t = site.data.i18n[include.lang] -%}
+{%- assign pubs = site.data.publications | where: "area", include.area -%}
+<section class="section" aria-labelledby="pubs">
+  <h3 class="section__title" id="pubs">{{ t.selected_pubs }}</h3>
+  <p class="section__note">{{ t.scholar_note_before }}<a href="https://scholar.google.com/citations?user=Jt1Kbs4AAAAJ&amp;hl=en" target="_blank" rel="noopener">{{ t.scholar_note_link }}</a>{{ t.scholar_note_after }}</p>
+  <ul class="rows" role="list">
+  {%- for p in pubs %}
+    <li class="row pub"{% if include.lang == "ja" %} lang="en"{% endif %}>
+      <span class="row__when">{{ p.year }}</span>
+      <div class="row__what">
+        {%- assign authors = p.authors | replace: site.author_name, '<span class="self">SELFNAME</span>' | replace: 'SELFNAME', site.author_name | replace: '*', '<sup>*</sup>' | replace: '†', '<sup>†</sup>' -%}
+        <p class="pub__cite">{{ authors }}.
+          <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>.
+          <cite>{{ p.venue }}</cite>.{% if p.preprint %}<span class="tag"{% if include.lang == "ja" %} lang="ja"{% endif %}>{{ t.preprint }}</span>{% endif %}
+          {%- if p.extra_url %} <span class="pub__links"{% if include.lang == "ja" %} lang="ja"{% endif %}>[<a href="{{ p.extra_url }}" target="_blank" rel="noopener">{{ t.short_description }}</a>]</span>{% endif %}
+        </p>
+        {%- assign note = p.notes[include.lang] | default: p.notes.en -%}
+        {%- if note %}
+        <p class="pub__note"{% if include.lang == "ja" %} lang="ja"{% endif %}>{{ note }}</p>
+        {%- endif %}
+      </div>
+    </li>
+  {%- endfor %}
+  </ul>
+</section>

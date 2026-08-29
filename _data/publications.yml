@@ -1,0 +1,93 @@
+# Selected publications. Newest first — add a new paper at the top of its section.
+# Shown on both the English and Japanese pages (citations stay in English).
+#
+# Fields:
+#   area       compbio | epi   -> which tab it appears on
+#   year       displayed in the left column
+#   authors    full list, in order. Your own name is bolded automatically.
+#   title      linked to `url`
+#   venue      journal or preprint server (rendered in italics)
+#   url        DOI link preferred
+#   preprint   true adds a "Preprint" /「プレプリント」 tag
+#   extra_url  optional: adds a bracketed "Short description" link
+#   notes      optional footnote under the citation, e.g. joint authorship.
+#              Put * or † directly in the `authors` list; they render as superscripts.
+
+# ---------------------------------------------------------------- Genetics / Computational Biology
+
+- area: compbio
+  year: 2026
+  authors: Ronghui Zhu*, Emma Dann*, Jun Yan, Justine Reyes Retana, Ryunosuke Goto, Reese C. Guitche, Lillian Brixi, Mineto Ota, Austin Hartman, Theodore L. Roth, Ansuman T. Satpathy, Jonathan K. Pritchard, Alexander Marson
+  title: Genome-scale perturb-seq in primary human CD4+ T cells maps context-specific regulators of T cell programs and human immune traits
+  venue: Cell
+  url: https://doi.org/10.1016/j.cell.2026.08.002
+  notes:
+    en: '* Joint first authors'
+    ja: '*共同筆頭著者'
+
+- area: compbio
+  year: 2025
+  authors: Ryunosuke Goto, Tatsuhiko Naito, Norbert Skokauskas, Kosuke Inoue
+  title: 'Heterogeneous effects of antidepressants on suicidal ideation: role of polygenic scores'
+  venue: medRxiv
+  url: https://doi.org/10.1101/2024.11.02.24316657
+  preprint: true
+
+# ---------------------------------------------------------------- Epidemiology / Causal Inference
+
+- area: epi
+  year: 2024
+  authors: Ryunosuke Goto, Kosuke Inoue, Itsuki Osawa, Katherine Baicker, Scott L. Fleming, Yusuke Tsugawa
+  title: Machine learning for detection of heterogeneous effects of Medicaid coverage on depression
+  venue: American Journal of Epidemiology
+  url: https://doi.org/10.1093/aje/kwae008
+  extra_url: OHIEpaper.pdf
+
+- area: epi
+  year: 2024
+  authors: Ryunosuke Goto, Irina Pinchuk, Oleksiy Kolodezhny, Nataliia Pimenova, Yukiko Kano, Norbert Skokauskas
+  title: Mental Health of Adolescents Exposed to the War in Ukraine
+  venue: JAMA Pediatrics
+  url: https://doi.org/10.1001/jamapediatrics.2024.0295
+
+- area: epi
+  year: 2023
+  authors: Ryunosuke Goto, Ichiro Kawachi, Naoki Kondo, Kosuke Inoue
+  title: Contribution of vaccinations to reducing socioeconomic disparities in COVID-19 deaths across U.S. counties
+  venue: Annals of Epidemiology
+  url: https://doi.org/10.1016/j.annepidem.2023.07.003
+
+- area: epi
+  year: 2023
+  authors: Ryunosuke Goto, Irina Pinchuk, Oleksiy Kolodezhny, Nataliia Pimenova, Norbert Skokauskas
+  title: 'Study Protocol: Adolescents of Ukraine During the Russian Invasion (AUDRI) Cohort'
+  venue: BMC Public Health
+  url: https://doi.org/10.1186/s12889-023-16070-3
+
+- area: epi
+  year: 2022
+  authors: Ryunosuke Goto, Anthony P. S. Guerrero, Mario Speranza, Daniel Fung, Campbell Paul, Norbert Skokauskas
+  title: War is a public health emergency
+  venue: The Lancet
+  url: https://doi.org/10.1016/S0140-6736(22)00479-2
+
+- area: epi
+  year: 2022
+  authors: Ryunosuke Goto, Roch Nianogo, Yusuke Okubo, Kosuke Inoue
+  title: Evaluation of Obesity Trends Among US Adolescents by Socioeconomic Status, 1999-2018
+  venue: JAMA Pediatrics
+  url: https://doi.org/10.1001/jamapediatrics.2022.1838
+
+- area: epi
+  year: 2022
+  authors: Ryunosuke Goto, Yusuke Okubo, Norbert Skokauskas
+  title: Reasons and trends in youth’s suicide rates during the COVID-19 pandemic
+  venue: The Lancet Regional Health – Western Pacific
+  url: https://doi.org/10.1016/j.lanwpc.2022.100567
+
+- area: epi
+  year: 2021
+  authors: Ryunosuke Goto, Thomas Frodl, Norbert Skokauskas
+  title: Armed Conflict and Early Childhood Development in 12 Low- and Middle-Income Countries
+  venue: Pediatrics
+  url: https://doi.org/10.1542/peds.2021-050332

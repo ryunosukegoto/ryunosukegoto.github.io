@@ -1,0 +1,27 @@
+---
+layout: default
+lang: en
+counterpart: posts-ja.html
+title: Posts
+subtitle: Under construction
+description: Posts by Ryunosuke Goto — under construction.
+---
+
+{% assign posts = site.posts | where: "lang", "en" %}
+{% if posts.size > 0 %}
+<ul class="rows" role="list">
+{% for p in posts %}
+  <li class="row">
+    <span class="row__when">{{ p.date | date: "%Y" }}</span>
+    <div class="row__what">
+      <p class="row__title"><strong><a href="{{ p.url | relative_url }}">{{ p.title }}</a></strong></p>
+      {% if p.description %}<p class="row__desc">{{ p.description }}</p>{% endif %}
+    </div>
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<div class="notice">
+  <p>{{ site.data.i18n.en.posts_none }}</p>
+</div>
+{% endif %}

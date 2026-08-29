@@ -1,0 +1,29 @@
+{%- comment -%}
+Renders a year/title/where/description list (education, awards, grants, media).
+
+Parameters:
+  items  a list from _data/ (e.g. site.data.awards)
+  lang   "en" or "ja"
+{%- endcomment -%}
+{%- assign L = include.lang -%}
+<ul class="rows" role="list">
+{%- for e in include.items %}
+  <li class="row">
+    <span class="row__when">{{ e.when }}</span>
+    <div class="row__what">
+      {%- assign ttl = e.title[L] -%}
+      {%- if ttl and ttl != "" %}
+      <p class="row__title"><strong>{% if e.title_url %}<a href="{{ e.title_url }}" target="_blank" rel="noopener">{{ ttl }}</a>{% else %}{{ ttl }}{% endif %}</strong></p>
+      {%- endif -%}
+      {%- assign whr = e.where[L] -%}
+      {%- if whr and whr != "" %}
+      <p class="row__where">{% if e.where_url %}<a href="{{ e.where_url }}" target="_blank" rel="noopener">{{ whr }}</a>{% else %}{{ whr }}{% endif %}</p>
+      {%- endif -%}
+      {%- assign dsc = e.desc[L] -%}
+      {%- if dsc and dsc != "" %}
+      <p class="row__desc">{{ dsc }}</p>
+      {%- endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>

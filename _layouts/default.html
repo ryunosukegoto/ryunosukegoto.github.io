@@ -1,0 +1,99 @@
+{%- comment -%}
+The single source of truth for the page shell: <head>, sidebar, and top tab bar.
+Edit this once and every page in both languages updates.
+
+Front matter each page supplies:
+  lang         "en" or "ja"           (required)
+  counterpart  filename of the same tab in the other language (required)
+  title        heading shown as the page's <h2>
+  head_title   optional override for the browser tab / <title>
+  description  optional meta description
+{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign other = site.data.i18n[t.lang_switch_code] -%}
+{%- if page.name == "index.html" -%}
+  {%- assign self_url = site.url | append: "/" -%}
+{%- else -%}
+  {%- assign self_url = site.url | append: "/" | append: page.name -%}
+{%- endif -%}
+{%- assign other_url = site.url | append: "/" | append: page.counterpart -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{% if page.head_title %}{{ page.head_title }}{% else %}{{ page.title }} &mdash; {{ t.name }}{% endif %}</title>
+	{%- if page.description %}
+	<meta name="description" content="{{ page.description }}" />
+	{%- endif %}
+	<link rel="canonical" href="{{ self_url }}" />
+	<link rel="alternate" hreflang="{{ page.lang }}" href="{{ self_url }}" />
+	<link rel="alternate" hreflang="{{ t.lang_switch_code }}" href="{{ other_url }}" />
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232f7d6d'/><text x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'>RG</text></svg>" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/academicons.min.css" />
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">{{ t.skip }}</a>
+
+<!-- Sidebar (identity) -->
+<aside class="sidebar">
+	<div class="sidebar__header">
+		<img class="sidebar__avatar" src="{{ site.baseurl }}/avatar.jpg" alt="{{ t.name }}" />
+		<div>
+			<h1 class="sidebar__name"><a href="{{ site.baseurl }}/{% if page.lang == 'ja' %}japanese.html{% else %}index.html{% endif %}">{{ t.name }}</a></h1>
+			<p class="sidebar__kana" lang="{{ t.other_name_lang }}">{{ t.other_name }}</p>
+			<p class="sidebar__title">{{ t.role }}</p>
+			<p class="sidebar__email">{{ t.email }}</p>
+		</div>
+	</div>
+
+	<ul class="socials">
+		<li><a href="https://scholar.google.com/citations?user=Jt1Kbs4AAAAJ&amp;hl=en" class="ai ai-google-scholar-square" target="_blank" rel="noopener" title="Google Scholar"><span class="label">Google Scholar</span></a></li>
+		<li><a href="https://github.com/ryunosukegoto/" class="fab fa-github" target="_blank" rel="noopener" title="GitHub"><span class="label">GitHub</span></a></li>
+		<li><a href="https://twitter.com/ryunosuke_goto" class="fab fa-twitter" target="_blank" rel="noopener" title="Twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="https://www.linkedin.com/in/ryunosuke-goto/" class="fab fa-linkedin" target="_blank" rel="noopener" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+	</ul>
+
+	<div class="sidebar__meta">
+		<a href="{{ site.baseurl }}/CV_ryunosuke_goto.pdf" target="_blank" rel="noopener">{{ t.cv_link }}</a>
+	</div>
+</aside>
+
+<!-- Page: top tab bar + main -->
+<div class="page">
+
+	<header class="topbar">
+		<nav class="tabs" aria-label="{{ t.nav_label }}">
+			{%- for item in site.data.nav[page.lang] %}
+			<a href="{{ site.baseurl }}/{{ item.file }}"{% if item.file == page.name %} aria-current="page"{% endif %}>{{ item.label }}</a>
+			{%- endfor %}
+		</nav>
+		<div class="topbar__lang">
+			<a href="{{ site.baseurl }}/{{ page.counterpart }}" lang="{{ t.lang_switch_code }}" hreflang="{{ t.lang_switch_code }}">{{ t.lang_switch }}</a>
+		</div>
+	</header>
+
+	<main class="main" id="main">
+		<div class="content">
+
+			<h2 class="page-title">{{ page.title }}</h2>
+			{%- if page.subtitle %}
+			<p class="page-subtitle">{{ page.subtitle }}</p>
+			{%- endif %}
+
+			{{ content }}
+
+			<footer class="site-footer">
+				<p>{{ t.copyright }}</p>
+			</footer>
+
+		</div>
+	</main>
+
+</div>
+
+</body>
+</html>

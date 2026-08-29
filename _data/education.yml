@@ -1,0 +1,19 @@
+# Education. Newest first.
+# Each field takes an `en:` and a `ja:` value. Leave a `ja:` out to hide that
+# line on the Japanese page only.
+
+- when: 2024&ndash;
+  title:
+    en: PhD, Biomedical Data Science
+    ja: 博士課程　Biomedical Data Science
+  where:
+    en: Stanford University School of Medicine, Stanford, CA, USA
+    ja: スタンフォード大学医学部（米国・カリフォルニア州）
+
+- when: 2013&ndash;2019
+  title:
+    en: MD
+    ja: 医学士（MD）
+  where:
+    en: The University of Tokyo, Tokyo, Japan
+    ja: 東京大学医学部医学科

@@ -1,0 +1,24 @@
+# The top tab bar. Add or reorder a tab here and it changes on all pages
+# of that language at once.
+#
+# "file" must match the page's filename so the active tab is highlighted.
+
+en:
+  - file: index.html
+    label: Home
+  - file: compbio.html
+    label: Genetics / Computational Biology
+  - file: epi.html
+    label: Epidemiology / Causal Inference
+  - file: posts.html
+    label: Posts
+
+ja:
+  - file: japanese.html
+    label: ホーム
+  - file: compbio-ja.html
+    label: 遺伝学・計算生物学
+  - file: epi-ja.html
+    label: 疫学・因果推論
+  - file: posts-ja.html
+    label: 記事

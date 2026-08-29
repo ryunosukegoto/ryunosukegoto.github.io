@@ -1,0 +1,80 @@
+# Awards and honors. Newest first.
+#
+#   when        left-hand column
+#   title       the award; `title_url` makes it a link
+#   where       awarding body; `where_url` makes it a link
+#   desc        optional one-line explanation (English page only, as before)
+
+- when: 2024&ndash;
+  title:
+    en: Knight-Hennessy Scholar
+    ja: Knight-Hennessy Scholar
+  title_url: https://knight-hennessy.stanford.edu/
+  where:
+    en: Stanford University
+  desc:
+    en: A fellowship and leadership program for graduate students at Stanford. Scholars receive full funding and participate in leadership training, mentorship, and experiential learning for up to three years of their graduate study.
+
+# - when: 2023
+#   title:
+#     en: Kenneth Rothman Travel Scholarship
+#     ja: Kenneth Rothman Travel Scholarship
+#   where:
+#     en: Society for Epidemiologic Research
+#     ja: Society for Epidemiologic Research（米国・疫学研究学会）
+#   where_url: https://epiresearch.org/
+#   desc:
+#     en: Awarded for the 2023 Annual Meeting.
+
+- when: 2023
+  title:
+    en: Stanislav Kostyuchenko Award
+    ja: Stanislav Kostyuchenko Award
+  where:
+    en: Ukrainian Psychiatric Association
+    ja: ウクライナ精神医学会
+  where_url: https://ukrpsychiatry.org/
+  desc:
+    en: Awarded to young researchers, doctors, or clinical psychologists who made significant contributions to psychiatric care in Ukraine.
+
+# - when: 2022
+#   title:
+#     en: Department of Pediatrics Research Award
+#     ja: 研究奨励賞
+#   where:
+#     en: The University of Tokyo Hospital
+#     ja: 東京大学医学部附属病院小児科
+#   where_url: https://tokyoped.jp/
+#   desc:
+#     en: Awarded to the top researcher in the Department of Pediatrics at the University of Tokyo Hospital.
+
+- when: 2020
+  title:
+    en: Donald J. Cohen Fellowship Program for International Scholars in Child and Adolescent Mental Health
+    ja: Donald J. Cohen Fellowship Program for International Scholars in Child and Adolescent Mental Health
+  where:
+    en: International Association for Child and Adolescent Psychiatry and Allied Professions (IACAPAP)
+    ja: 国際児童青年精神医学会
+  where_url: https://iacapap.org/
+  desc:
+    en: Awarded to emerging international leaders in child and adolescent mental health.
+
+- when: 2018
+  title:
+    en: Dean’s Award
+    ja: 学部長賞
+  where:
+    en: The University of Tokyo Faculty of Medicine
+    ja: 東京大学医学部
+  where_url: https://www.m.u-tokyo.ac.jp/
+  desc:
+    en: Awarded to the top three of 100+ students in the Class of 2019, based on academic excellence.
+
+# - when: 2017&ndash;2019
+#   title:
+#     en: Scholarship for Aspiring Pediatricians, Obstetricians, and Gynecologists
+#     ja: 奨学生
+#   where:
+#     en: Pigeon Foundation
+#     ja: 公益財団法人ピジョン奨学財団
+#   where_url: https://www.pigeon-foundation.or.jp/

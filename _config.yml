@@ -1,0 +1,38 @@
+# Site settings for GitHub Pages (Jekyll 3.9.x — no custom plugins needed).
+#
+# GitHub builds this automatically on push. There is no local build step required.
+# To add content you normally only touch the files in _data/ — see _data/README.md.
+
+title: Ryunosuke Goto
+url: https://ryunosukegoto.github.io
+baseurl: ""
+
+# Your name as it appears in author lists; the publication template bolds it automatically.
+author_name: Ryunosuke Goto
+
+# Not part of the published site.
+exclude:
+  - .claude/
+  - README.md
+  - MAINTAINING.md
+  - bin/
+  - LICENSE.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - _site/
+  # Research working files — kept out of the published site even if committed by accident.
+  - gene_centric_GATA3_Stim48hr_annotated.html
+  - gene_centric_GATA3_Stim48hr_annotations.md
+  - gene_centric_IFNG_IL4_Stim48hr_annotated.html
+  - sparse-direct-effects-heatmap.pptx
+
+# Post URLs. This MUST be scoped to posts via `defaults` — setting a top-level
+# `permalink:` that ends in "/" also switches every *page* to a pretty URL
+# (/compbio/ instead of /compbio.html), which would break the nav links.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /posts/:year/:month/:day/:title/

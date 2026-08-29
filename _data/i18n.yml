@@ -1,0 +1,64 @@
+# All user-interface strings, in both languages.
+# Change a label here and it updates on every page in that language.
+
+en:
+  name: Ryunosuke Goto
+  other_name: 後藤 隆之介
+  other_name_lang: ja
+  role: Pediatrician-scientist
+  email: rgoto [at] stanford.edu
+  skip: Skip to content
+  nav_label: Sections
+  cv_link: CV (PDF)
+  lang_switch: 日本語
+  lang_switch_code: ja
+
+  education: Education
+  awards: Awards and Honors
+  grants: Research Grants
+  media: Media
+  cv: CV
+  cv_body_before: 'See my full CV '
+  cv_body_link: here
+  cv_body_after: .
+
+  selected_pubs: Selected Publications
+  scholar_note_before: 'A complete list is available on '
+  scholar_note_link: Google Scholar
+  scholar_note_after: .
+  preprint: Preprint
+  short_description: Short description
+
+  posts_none: This section is under construction.
+  copyright: © Ryunosuke Goto. All rights reserved.
+
+ja:
+  name: 後藤 隆之介
+  other_name: Ryunosuke Goto
+  other_name_lang: en
+  role: 小児科医・研究者
+  email: rgoto [at] stanford.edu
+  skip: 本文へ移動
+  nav_label: セクション
+  cv_link: CV（英語・PDF）
+  lang_switch: English
+  lang_switch_code: en
+
+  education: 学歴
+  awards: 受賞歴
+  grants: 研究助成金
+  media: メディア
+  cv: CV
+  cv_body_before: 'CV（英語）は'
+  cv_body_link: こちら
+  cv_body_after: を参照。
+
+  selected_pubs: 主要論文
+  scholar_note_before: '全業績は'
+  scholar_note_link: Google Scholar
+  scholar_note_after: をご参照ください。
+  preprint: プレプリント
+  short_description: 概要（英語）
+
+  posts_none: このページは準備中です。
+  copyright: © Ryunosuke Goto. All rights reserved.

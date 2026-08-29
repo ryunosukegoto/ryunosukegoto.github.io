@@ -1,0 +1,42 @@
+{%- comment -%}
+The sections shared by both Home pages: Education, Awards, Grants, Media, CV.
+Content comes from _data/education.yml, awards.yml, grants.yml, media.yml.
+
+Parameters:
+  lang   "en" or "ja"
+{%- endcomment -%}
+{%- assign L = include.lang -%}
+{%- assign t = site.data.i18n[L] -%}
+
+<section class="section" aria-labelledby="education">
+  <h3 class="section__title" id="education">{{ t.education }}</h3>
+  {% include entries.html items=site.data.education lang=L %}
+</section>
+
+<section class="section" aria-labelledby="awards">
+  <h3 class="section__title" id="awards">{{ t.awards }}</h3>
+  {% include entries.html items=site.data.awards lang=L %}
+</section>
+
+{% comment %}
+  Grants section hidden. Deliberately a Liquid comment, not an HTML <!-- --> comment:
+  an HTML comment still lets Liquid run, so the grant amounts would ship inside the page
+  source where anyone could read them via View Source. This emits nothing at all.
+  To show it again, delete the {% comment %} and {% endcomment %} lines around it.
+{% endcomment %}
+{% comment %}
+<section class="section" aria-labelledby="grants">
+  <h3 class="section__title" id="grants">{{ t.grants }}</h3>
+  {% include entries.html items=site.data.grants lang=L %}
+</section>
+{% endcomment %}
+
+<section class="section" aria-labelledby="media">
+  <h3 class="section__title" id="media">{{ t.media }}</h3>
+  {% include entries.html items=site.data.media lang=L %}
+</section>
+
+<section class="section" aria-labelledby="cv">
+  <h3 class="section__title" id="cv">{{ t.cv }}</h3>
+  <p>{{ t.cv_body_before }}<a href="{{ site.baseurl }}/CV_ryunosuke_goto.pdf" target="_blank" rel="noopener">{{ t.cv_body_link }}</a>{{ t.cv_body_after }}</p>
+</section>

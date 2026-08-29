@@ -1,0 +1,27 @@
+---
+layout: default
+lang: ja
+counterpart: posts.html
+title: 記事
+subtitle: 準備中
+description: 後藤隆之介の記事（準備中）。
+---
+
+{% assign posts = site.posts | where: "lang", "ja" %}
+{% if posts.size > 0 %}
+<ul class="rows" role="list">
+{% for p in posts %}
+  <li class="row">
+    <span class="row__when">{{ p.date | date: "%Y" }}</span>
+    <div class="row__what">
+      <p class="row__title"><strong><a href="{{ p.url | relative_url }}">{{ p.title }}</a></strong></p>
+      {% if p.description %}<p class="row__desc">{{ p.description }}</p>{% endif %}
+    </div>
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<div class="notice">
+  <p>{{ site.data.i18n.ja.posts_none }}</p>
+</div>
+{% endif %}

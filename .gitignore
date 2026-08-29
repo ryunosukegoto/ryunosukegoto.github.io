@@ -1,0 +1,15 @@
+# Jekyll build output and caches — generated, never committed.
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Resolved locally by `bundle install`; GitHub Pages uses its own pinned versions.
+Gemfile.lock
+vendor/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

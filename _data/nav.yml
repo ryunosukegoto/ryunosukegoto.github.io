@@ -9,7 +9,7 @@ en:
   - file: compbio.html
     label: Genetics / Computational Biology
   - file: epi.html
-    label: Epidemiology / Causal Inference
+    label: Epidemiology
   - file: posts.html
     label: Posts
 
@@ -19,6 +19,6 @@ ja:
   - file: compbio-ja.html
     label: 遺伝学・計算生物学
   - file: epi-ja.html
-    label: 疫学・因果推論
+    label: 疫学
   - file: posts-ja.html
     label: 記事

@@ -26,8 +26,6 @@ section. `area` decides which tab it appears on: `compbio` or `epi`.
 
 Your own name is bolded automatically — just type it normally in the author list.
 
-Optional: `extra_url: something.pdf` adds a bracketed "Short description" link after the citation.
-
 **Joint / equal authorship.** Put `*` or `†` directly in the `authors` list — they render as
 superscripts — and add a `notes:` block for the legend:
 

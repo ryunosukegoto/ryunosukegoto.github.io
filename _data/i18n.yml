@@ -27,7 +27,6 @@ en:
   scholar_note_link: Google Scholar
   scholar_note_after: .
   preprint: Preprint
-  short_description: Short description
 
   posts_none: This section is under construction.
   copyright: © Ryunosuke Goto. All rights reserved.
@@ -58,7 +57,6 @@ ja:
   scholar_note_link: Google Scholar
   scholar_note_after: をご参照ください。
   preprint: true
-  short_description: 概要（英語）
 
   posts_none: このページは準備中です。
   copyright: © Ryunosuke Goto. All rights reserved.

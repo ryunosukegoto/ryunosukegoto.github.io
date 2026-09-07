@@ -8,7 +8,7 @@
 #   title      linked to `url`
 #   venue      journal or preprint server (rendered in italics)
 #   url        DOI link preferred
-#   preprint   true adds a "Preprint" /「プレプリント」 tag
+#   preprint   true adds a "Preprint" tag
 #   extra_url  optional: adds a bracketed "Short description" link
 #   notes      optional footnote under the citation, e.g. joint authorship.
 #              Put * or † directly in the `authors` list; they render as superscripts.

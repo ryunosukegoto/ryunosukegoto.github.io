@@ -57,7 +57,7 @@ ja:
   scholar_note_before: '全業績は'
   scholar_note_link: Google Scholar
   scholar_note_after: をご参照ください。
-  preprint: プレプリント
+  preprint: true
   short_description: 概要（英語）
 
   posts_none: このページは準備中です。

@@ -34,8 +34,8 @@
     en: Ukrainian Psychiatric Association
     ja: ウクライナ精神医学会
   where_url: https://ukrpsychiatry.org/
-  desc:
-    en: Awarded to young researchers, doctors, or clinical psychologists who made significant contributions to psychiatric care in Ukraine.
+  # desc:
+  #   en: Awarded to young researchers, doctors, or clinical psychologists who made significant contributions to psychiatric care in Ukraine.
 
 # - when: 2022
 #   title:
@@ -56,8 +56,8 @@
     en: International Association for Child and Adolescent Psychiatry and Allied Professions (IACAPAP)
     ja: 国際児童青年精神医学会
   where_url: https://iacapap.org/
-  desc:
-    en: Awarded to emerging international leaders in child and adolescent mental health.
+  # desc:
+  #   en: Awarded to emerging international leaders in child and adolescent mental health.
 
 - when: 2018
   title:
@@ -67,8 +67,8 @@
     en: The University of Tokyo Faculty of Medicine
     ja: 東京大学医学部
   where_url: https://www.m.u-tokyo.ac.jp/
-  desc:
-    en: Awarded to the top three of 100+ students in the Class of 2019, based on academic excellence.
+  # desc:
+  #   en: Awarded to the top three of 100+ students in the Class of 2019, based on academic excellence.
 
 # - when: 2017&ndash;2019
 #   title:

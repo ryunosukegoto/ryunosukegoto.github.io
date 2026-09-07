@@ -19,7 +19,6 @@ Parameters:
         <p class="pub__cite">{{ authors }}.
           <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>.
           <cite>{{ p.venue }}</cite>.{% if p.preprint %}<span class="tag"{% if include.lang == "ja" %} lang="ja"{% endif %}>{{ t.preprint }}</span>{% endif %}
-          {%- if p.extra_url %} <span class="pub__links"{% if include.lang == "ja" %} lang="ja"{% endif %}>[<a href="{{ p.extra_url }}" target="_blank" rel="noopener">{{ t.short_description }}</a>]</span>{% endif %}
         </p>
         {%- assign note = p.notes[include.lang] | default: p.notes.en -%}
         {%- if note %}
